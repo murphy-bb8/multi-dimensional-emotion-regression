@@ -1,6 +1,6 @@
 # Multi-Dimensional Emotion Regression with Deep Learning
 
-This repository contains the official implementation of the paper published in IEEE Access, focusing on multi-dimensional emotion regression using advanced deep learning techniques.
+This repository contains the official implementation of the paper Multi-dimensional Sentiment Analysis and Salience Study of IMDb Reviews Based on Natural Language Processing, focusing on multi-dimensional emotion regression using advanced deep learning techniques.
 
 ## 📋 Overview
 
@@ -35,8 +35,8 @@ visualization
 ### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/multi-dimensional-emotion-regression.git
+# Clone repository
+git clone https://github.com/murphy-bb8/multi-dimensional-emotion-regression.git
 cd multi-dimensional-emotion-regression
 
 # Create virtual environment
@@ -195,8 +195,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 For questions and support, please contact:
-- Email: [maytheforce806@gmail.com]
-- GitHub Issues: [Repository Issues Page]
+- Email: maytheforce806@gmail.com
+- GitHub Issues: https://github.com/murphy-bb8/multi-dimensional-emotion-regression/issues
 
 ---
 

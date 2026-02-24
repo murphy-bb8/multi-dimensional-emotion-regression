@@ -20,12 +20,12 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 setup(
     name="multi-dimensional-emotion-regression",
     version="1.0.0",
-    author="Research Team",
-    author_email="research@example.com",
+    author="Wenxuan Wang, Huilin Zuo",
+    author_email="maytheforce806@gmail.com",
     description="Multi-dimensional emotion regression using deep learning",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/multi-dimensional-emotion-regression",
+    url="https://github.com/murphy-bb8/multi-dimensional-emotion-regression",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",
@@ -75,8 +75,8 @@ setup(
         "pytorch",
     ],
     project_urls={
-        "Bug Reports": "https://github.com/yourusername/multi-dimensional-emotion-regression/issues",
-        "Source": "https://github.com/yourusername/multi-dimensional-emotion-regression",
+        "Bug Reports": "https://github.com/murphy-bb8/multi-dimensional-emotion-regression/issues",
+        "Source": "https://github.com/murphy-bb8/multi-dimensional-emotion-regression",
         "Documentation": "https://multi-dimensional-emotion-regression.readthedocs.io/",
     },
 )

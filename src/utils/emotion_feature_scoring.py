@@ -11,7 +11,7 @@ df = pd.read_csv("cleaned_reviews.csv")
 df = df.dropna(subset=["cleaned_review"])
 
 # ========== Step 2: Build NRC Emotion Lexicon ==========
-nrc_path = r"NRC-Emotion-Lexicon-Wordlevel-v0.92.txt"
+nrc_path = r"D:\PythonProjects\comment_cleaning\NRC-Emotion-Lexicon-Wordlevel-v0.92.txt"
 emotions = ['anger', 'anticipation', 'disgust', 'fear', 'joy',
             'sadness', 'surprise', 'trust', 'positive', 'negative']
 

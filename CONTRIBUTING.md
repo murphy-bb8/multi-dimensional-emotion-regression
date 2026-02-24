@@ -30,7 +30,7 @@ We are committed to providing a welcoming and inclusive environment for all cont
 1. **Fork the repository**
    ```bash
    # Fork on GitHub, then clone your fork
-   git clone https://github.com/yourusername/multi-dimensional-emotion-regression.git
+   git clone https://github.com/murphy-bb8/multi-dimensional-emotion-regression.git
    cd multi-dimensional-emotion-regression
    ```
 
