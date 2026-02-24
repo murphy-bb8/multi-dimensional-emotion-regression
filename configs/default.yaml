@@ -1,0 +1,118 @@
+# Default Configuration for Multi-dimensional Emotion Regression
+
+# Model Configuration
+model:
+  name: "microsoft/deberta-v3-base"
+  max_length: 128
+  dropout: 0.3
+  hidden_size: 768
+  intermediate_size: 3072
+  num_attention_heads: 12
+  num_hidden_layers: 12
+
+# Training Configuration
+training:
+  batch_size: 32
+  learning_rate_bert: 5e-6
+  learning_rate_head: 1e-5
+  weight_decay: 0.5
+  epochs: 20
+  warmup_ratio: 0.15
+  gradient_clip_norm: 1.0
+  patience: 3
+  freeze_epochs: 5
+  
+  # Loss configuration
+  loss_type: "huber"  # Options: "huber", "mse"
+  huber_delta: 0.6
+  
+  # Mixed precision
+  use_amp: true
+  
+  # Distributed training
+  distributed: false
+  backend: "nccl"  # Options: "nccl", "gloo"
+
+# Data Configuration
+data:
+  train_file: "data/train_data.csv"
+  val_file: "data/val_data.csv"
+  test_file: "data/test_data.csv"
+  
+  # Data augmentation
+  augmentation_enabled: true
+  augmentation_prob: 0.1
+  mask_token: "[MASK]"
+  use_synonym_augmentation: false
+  
+  # Label processing
+  log_transform: true
+  normalize_labels: true
+  outlier_removal:
+    enabled: true
+    low_quantile: 0.01
+    high_quantile: 0.99
+    bins: 20
+  
+  # Density weighting
+  density_weight_alpha: 1.5
+  density_bins: 50
+
+# Cross-validation Configuration
+cross_validation:
+  n_splits: 5
+  shuffle: true
+  random_state: 42
+
+# Output Configuration
+output:
+  base_dir: "outputs"
+  save_checkpoints: true
+  checkpoint_dir: "checkpoints"
+  save_best_model: true
+  save_predictions: true
+  save_visualizations: true
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  log_file: "training.log"
+  use_wandb: false
+  use_tensorboard: true
+
+# Evaluation Configuration
+evaluation:
+  metrics: ["mse", "rmse", "mae", "pearson", "spearman"]
+  save_predictions: true
+  create_visualizations: true
+  
+# Mixture of Experts Configuration (optional)
+moe:
+  enabled: false
+  num_experts: 4
+  expert_dropout: 0.1
+  gate_dropout: 0.1
+  load_balancing_loss_coef: 0.01
+
+# Hyperparameter Optimization Configuration
+optuna:
+  enabled: false
+  n_trials: 100
+  timeout: 3600  # seconds
+  study_name: "emotion_regression_optimization"
+  direction: "minimize"
+  metric: "rmse"
+  
+  # Search space
+  search_space:
+    learning_rate_bert: [1e-6, 1e-4]
+    learning_rate_head: [1e-5, 1e-3]
+    weight_decay: [0.1, 1.0]
+    batch_size: [16, 32, 64]
+    dropout: [0.1, 0.5]
+
+# Reproducibility
+reproducibility:
+  seed: 42
+  deterministic: true
+  benchmark: false
