@@ -145,7 +145,7 @@ data__/*_processed.csv
 # Outputs and results
 outputs*/
 outputs_*/*
-experiments/*/results/
+# experiments/*/results/  # Temporarily commented for image renaming
 experiments/*/checkpoints/
 logs/
 wandb/
@@ -187,9 +187,9 @@ config/secrets.yaml
 config/local.yaml
 
 # Analysis results
-*.png
-*.jpg
-*.jpeg
+# *.png  # Temporarily commented for image renaming
+# *.jpg  # Temporarily commented for image renaming
+# *.jpeg  # Temporarily commented for image renaming
 *.pdf
 *.svg
 !docs/images/*.png
