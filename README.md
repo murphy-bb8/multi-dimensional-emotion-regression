@@ -23,7 +23,7 @@ This project implements a comprehensive framework for predicting multi-dimension
 ├── configs/                      # Configuration files
 ├── data/                         # Dataset and preprocessing
 ├── experiments/                  # Experimental results
-├── notebooks/                    # Jupyter notebooks for visualization
+visualization
 ├── scripts/                      # Reproduction scripts
 ├── requirements.txt              # Dependencies
 ├── setup.py                     # Package setup
@@ -153,7 +153,6 @@ data:
 ### Evaluation and Visualization
 - `evaluation/metrics.py`: Comprehensive evaluation metrics
 - `visualization/`: Result visualization and analysis
-- `visualization.ipynb`: Interactive analysis notebook
 
 ## 🧪 Reproduction
 
@@ -174,10 +173,8 @@ If you use this code in your research, please cite our paper:
 ```bibtex
 @article{author2024multidimensional,
   title={Multi-dimensional Emotion Regression with Deep Learning},
-  author={Author Names},
-  journal={IEEE Access},
-  year={2024},
-  doi={xxxx}
+  author={Wenxuan Wang, Huilin Zuo},
+  year={2025}
 }
 ```
 
